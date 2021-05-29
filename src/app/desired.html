@@ -1,0 +1,31 @@
+<rectangle>
+  <shape [item]="currentShape$ | async"></shape>
+
+  <brick *ngFor="brick in busyBricks$ | async">
+  </brick>
+
+</rectangle>
+
+<rectangle left="40" top="40">
+  Next shape:
+  <shape [item]="nextShape$ | async"></shape>
+  Score: {{ score }}
+</rectangle>
+
+attr
+
+left
+top
+width
+height
+border
+
+elements:
+rectangle
+custom
+text
+
+scoping
+
+
+

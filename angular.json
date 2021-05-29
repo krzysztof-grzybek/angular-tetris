@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ng-canvas"
+  "defaultProject": "ng-canvas",
+  "cli": {
+    "analytics": "5823671d-fe6e-4f57-816d-3eaded54bcd5"
+  }
 }
