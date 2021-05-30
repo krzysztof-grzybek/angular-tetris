@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 export interface Brick {
   left: number;
@@ -8,17 +8,9 @@ export interface Brick {
 @Component({
   selector: 'app-brick',
   templateUrl: './brick.component.html',
-  styleUrls: ['./brick.component.scss']
+  styleUrls: ['./brick.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BrickComponent implements OnInit {
+export class BrickComponent {
   @Input() model: Brick | null = null;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  hop() {
-    console.log('brick')
-  }
 }

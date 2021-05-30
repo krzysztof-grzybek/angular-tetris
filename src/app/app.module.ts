@@ -5,10 +5,9 @@ import {
 } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {CanvasRendererFactory} from './canvasRendererFactory';
+import {CanvasRendererFactory} from './renderer/canvas-renderer-factory';
 import { ShapeComponent } from './shape/shape.component';
 import { BrickComponent } from './brick/brick.component';
-
 
 
 @NgModule({
@@ -24,7 +23,7 @@ import { BrickComponent } from './brick/brick.component';
     {
       provide: RendererFactory2,
       useClass: CanvasRendererFactory,
-      deps: [EventManager, DomSharedStylesHost, APP_ID, NgZone],
+      deps: [EventManager, NgZone],
     },
   ],
   bootstrap: [AppComponent],

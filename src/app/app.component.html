@@ -1,19 +1,19 @@
-<!--<rectangle  [attr.color="color" width="200" height="200" border = "10">-->
-<!--  <rectangle top="50" left="50" width="{{ widthIn }}" height="100" border="4">Eluwina</rectangle>-->
-<!--</rectangle>-->
-
-
-
 <rectangle width="400" height="800">
-<!--  <shape [item]="currentShape$ | async"></shape>-->
+  <app-shape [model]="currentShape$ | async"></app-shape>
 
-  <app-brick *ngFor="let brick of busyBricks$ | async" [model]="brick">
+  <app-brick
+    *ngFor="let brick of busyBricks$ | async"
+    [model]="brick"
+  >
   </app-brick>
 
 </rectangle>
 
-<!--<rectangle left="40" top="40">-->
-<!--  Next shape:-->
-<!--  <shape [item]="nextShape$ | async"></shape>-->
-<!--  Score: {{ score }}-->
-<!--</rectangle>-->
+<rectangle left="400" top="200">
+  Next shape:
+  <app-shape [model]="nextShape$ | async"></app-shape>
+  <rectangle top="100">
+    Score: {{ score }}
+  </rectangle>
+
+</rectangle>
